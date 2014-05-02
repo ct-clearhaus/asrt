@@ -7,6 +7,18 @@
 asrt
 ==========
 
+.. image:: https://travis-ci.org/ct-clearhaus/asrt.png?branch=master
+    :alt: Build Status
+    :target: https://travis-ci.org/ct-clearhaus/asrt
+
+.. image:: https://codeclimate.com/github/ct-clearhaus/asrt.png
+    :alt: Code Climate
+    :target: https://codeclimate.com/github/ct-clearhaus/asrt
+
+.. image:: https://coveralls.io/repos/ct-clearhaus/asrt/badge.png
+    :alt: Coveralls
+    :target: https://coveralls.io/r/ct-clearhaus/asrt
+
 .. image:: http://img.shields.io/license/MIT.png?color=green
     :alt: MIT License
     :target: http://opensource.org/licenses/MIT
@@ -15,7 +27,7 @@ Introduction
 ------------
 
 `This gem <https://rubygems.org/gems/asrt>`_ simply gives you :ruby:`asrt` so
-you can do
+you can do assertions like this:
 
 .. code-block:: ruby
 
@@ -52,7 +64,7 @@ Examples
     def funny(input)
       asrt input.is_a?(String), 'Me only eat strings.'
 
-      input + ' is funny'
+      input.strip + ' is funny'
     end
 
 
