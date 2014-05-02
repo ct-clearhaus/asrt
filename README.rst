@@ -15,7 +15,7 @@ asrt
     :alt: Code Climate
     :target: https://codeclimate.com/github/ct-clearhaus/asrt
 
-.. image:: https://coveralls.io/repos/ct-clearhaus/asrt/badge.png
+.. image:: https://coveralls.io/repos/ct-clearhaus/asrt/badge.png?branch=master
     :alt: Coveralls
     :target: https://coveralls.io/r/ct-clearhaus/asrt
 
@@ -34,7 +34,7 @@ you can do assertions like this:
     def funny(input)
       asrt input.is_a?(String), 'Me only eat strings.'
 
-      input + ' is funny'
+      input.strip + ' is funny'
     end
 
 Why use :ruby:`asrt` rather than :ruby:`assert`? Well, it's short and you may
@@ -54,19 +54,6 @@ Dependencies
 ............
 
 None.
-
-
-Examples
---------
-
-.. code-block:: ruby
-
-    def funny(input)
-      asrt input.is_a?(String), 'Me only eat strings.'
-
-      input.strip + ' is funny'
-    end
-
 
 
 Contribute
