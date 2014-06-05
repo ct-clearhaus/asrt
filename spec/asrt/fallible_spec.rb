@@ -28,9 +28,16 @@ describe 'Asrt::Fallible#asrt' do
     expect{ asrt { true } }.to_not raise_error
   end
 
+  context 'when failing with a block' do
+    it 'includes file name and line number in the message' do
+      expect{ asrt { false } }.to raise_error(Asrt::AssertionError, /\A#{__FILE__}:\d+:\z/)
+      expect{ asrt 'msg' do false end }.to raise_error(Asrt::AssertionError, /\A#{__FILE__}:\d+:msg\z/)
+    end
+  end
+
   it 'should fail with the given message, when failing' do
     expect{ asrt false, 'msg' }.to raise_error(Asrt::AssertionError, 'msg')
-    expect{ asrt 'msg' do false end }.to raise_error(Asrt::AssertionError, 'msg')
+    expect{ asrt 'msg' do false end }.to raise_error(Asrt::AssertionError, /msg/)
   end
 
   it 'should complain when too many arguments are given' do

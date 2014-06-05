@@ -10,6 +10,8 @@ module Asrt
         okay = (condition == true)
       else
         message, garbage = args
+        file_line = block.source_location
+        message = (file_line << message).join(':')
 
         okay = (yield rescue false) == true
       end
