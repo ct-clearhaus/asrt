@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'asrt'
-  s.version     = '0.1.0'
+  s.version     = '0.1.1'
   s.summary     = 'Assertion library.'
   s.description = 'Allows you to assert things to be true in your code.'
   s.license     = 'MIT'
